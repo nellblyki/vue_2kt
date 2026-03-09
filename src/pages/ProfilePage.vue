@@ -31,9 +31,9 @@ onMounted(async () => {
         <div v-if="data" class="flex flex-col gap-4">
           <div class="font-medium shadow rounded-xl p-3 w-max">Username: {{ data.username }}</div>
           <div class="font-medium shadow rounded-xl p-3 w-max">Name: {{ data.firstName }}</div>
-          <div class="font-medium shadow rounded-xl p-3 py-2 w-max">Lastname: {{ data.lastName }}</div>
-          <div class="font-medium shadow rounded-xl p-3 py-2 w-max">Gender: {{ data.gender }}</div>
-          <div class="font-medium shadow rounded-xl p-3 py-2 w-max">Email: {{ data.email }}</div>
+          <div class="font-medium shadow rounded-xl p-3 w-max">Lastname: {{ data.lastName }}</div>
+          <div class="font-medium shadow rounded-xl p-3 w-max">Gender: {{ data.gender }}</div>
+          <div class="font-medium shadow rounded-xl p-3 w-max">Email: {{ data.email }}</div>
         </div>
       </div>
     </div>
