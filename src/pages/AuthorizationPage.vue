@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type AuthApi } from '@/types/type'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 const username = ref('')
@@ -23,12 +23,21 @@ async function post() {
   console.log(data.value)
   if (resp.ok) {
     localStorage.setItem('token', data.value.accessToken)
-    console.log('добавлена хуйня')
     router.push('/profile')
   } else {
     error.value = true
   }
 }
+// watch(
+//   ()=> data.value,
+//   ()=> {
+//     localStorage.setItem('token', data.value.accessToken)
+//     console.log(data.value)
+//   },
+//   {
+//     deep: true
+//   }
+// )
 </script>
 <template>
   <div class="flex justify-center mt-25">
